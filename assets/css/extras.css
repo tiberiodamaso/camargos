@@ -5,6 +5,28 @@
    visual das nove paginas. O min-height devolve a altura de sempre, agora de
    forma declarada em vez de acidental. */
 #top-menu{min-height:150px}
+
+/* Botao flutuante de WhatsApp: o unico contato clicavel do site.
+   O "voltar ao topo" do Divi tambem e fixo a direita, em bottom:125px e
+   right:0, com cerca de 40px de lado. O flutuante fica embaixo dele, com 45px
+   de folga, e um z-index abaixo para nunca cobri-lo. */
+.whatsapp-float{position:fixed;right:24px;bottom:24px;z-index:99998;
+  display:flex;align-items:center;justify-content:center;
+  width:56px;height:56px;border-radius:50%;
+  background:#25d366;color:#fff;text-decoration:none;
+  box-shadow:0 4px 12px rgba(0,0,0,.28);
+  transition:transform .2s ease,box-shadow .2s ease}
+.whatsapp-float:hover,.whatsapp-float:focus-visible{
+  transform:scale(1.08);box-shadow:0 6px 18px rgba(0,0,0,.34);color:#fff}
+.whatsapp-float:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.whatsapp-float>svg{display:block;width:32px;height:32px}
+@media (max-width:767px){
+  .whatsapp-float{right:16px;bottom:16px;width:52px;height:52px}
+  .whatsapp-float>svg{width:29px;height:29px}}
+@media (prefers-reduced-motion:reduce){
+  .whatsapp-float{transition:none}
+  .whatsapp-float:hover,.whatsapp-float:focus-visible{transform:none}}
+
 #footer-info a{color:inherit}
 /* selo de WhatsApp ao lado de dois telefones do rodape, no lugar de um icone
    Font Awesome que nenhuma pagina carregava */
