@@ -1,0 +1,14 @@
+/* O item de WhatsApp do menu era um <a> vazio seguido de outro com um icone
+   Font Awesome que nenhuma pagina carregava: dois links invisiveis, empilhados,
+   que sozinhos esticavam o cabecalho em 80px. Agora e um link so, com SVG
+   proprio. A caixa de 100px reproduz a altura antiga, para o cabecalho e o
+   logotipo ficarem do tamanho de sempre, e o icone e posicionado no rodape
+   dessa caixa para alinhar com o texto dos outros itens. */
+#top-menu li.menu-item-whatsapp{position:relative}
+#top-menu li.menu-item-whatsapp>a{display:block;width:20px;height:100px;
+  padding-bottom:50px;box-sizing:border-box;line-height:0}
+#top-menu li.menu-item-whatsapp>a>svg{position:absolute;left:0;bottom:0}
+#mobile_menu li.menu-item-whatsapp>a{display:block;line-height:0;padding:10px 5%}
+#mobile_menu li.menu-item-whatsapp>a>svg{display:block}
+#footer-info a{color:inherit}
+.whatsapp-mark{display:inline-block;vertical-align:-2px}
