@@ -1,14 +1,11 @@
-/* O item de WhatsApp do menu era um <a> vazio seguido de outro com um icone
-   Font Awesome que nenhuma pagina carregava: dois links invisiveis, empilhados,
-   que sozinhos esticavam o cabecalho em 80px. Agora e um link so, com SVG
-   proprio. A caixa de 100px reproduz a altura antiga, para o cabecalho e o
-   logotipo ficarem do tamanho de sempre, e o icone e posicionado no rodape
-   dessa caixa para alinhar com o texto dos outros itens. */
-#top-menu li.menu-item-whatsapp{position:relative}
-#top-menu li.menu-item-whatsapp>a{display:block;width:20px;height:100px;
-  padding-bottom:50px;box-sizing:border-box;line-height:0}
-#top-menu li.menu-item-whatsapp>a>svg{position:absolute;left:0;bottom:0}
-#mobile_menu li.menu-item-whatsapp>a{display:block;line-height:0;padding:10px 5%}
-#mobile_menu li.menu-item-whatsapp>a>svg{display:block}
+/* O item de WhatsApp do menu saiu por decisao do cliente. Na captura eram
+   dois <a> vazios empilhados, cada um com padding-bottom:50px, e era essa caixa
+   de 100px que dava 150px ao #top-menu, 200px ao cabecalho e 120px ao logotipo.
+   Sem o item, o menu cai para 64px e o cabecalho encolhe para 114px, mudando o
+   visual das nove paginas. O min-height devolve a altura de sempre, agora de
+   forma declarada em vez de acidental. */
+#top-menu{min-height:150px}
 #footer-info a{color:inherit}
+/* selo de WhatsApp ao lado de dois telefones do rodape, no lugar de um icone
+   Font Awesome que nenhuma pagina carregava */
 .whatsapp-mark{display:inline-block;vertical-align:-2px}
