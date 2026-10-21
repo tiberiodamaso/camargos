@@ -1,0 +1,7 @@
+# Protótipo em aprovação: rastreamento bloqueado.
+# Na publicação oficial, troque "Disallow: /" por "Allow: /" e retire o noindex
+# das páginas e do arquivo _headers.
+User-agent: *
+Disallow: /
+
+Sitemap: https://camargosadvocacia.adv.br/sitemap.xml
